@@ -103,7 +103,7 @@ public class ReservaService {
         Reserva reserva = buscarPorId(id);
 
         if (reserva.getStatus() != Status.PENDENTE && reserva.getStatus() != Status.CONFIRMADA) {
-            throw new IllegalStateException("Só é pérmitido adicionar detalhes a uma reserva pendente ou confirmada");
+            throw new IllegalStateException("Só é pérmitido adicionar detalhes a uma reserva pendente ou confirmada!");
         }
 
         if (reserva.getDetalhesEstadia() != null) {
